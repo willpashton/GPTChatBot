@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 First things first, we are obviously using nodemon, 
 being able to see changes as they go live is too useful -
 using this in line with browser-sync to reload when source files change.
@@ -19,3 +20,26 @@ Template inheritance go brrrr
 STUPID MISTAKE: didnt ignore node_modules, so browser sync ran slow as hell
 
 DRY Dev by using var() in stylesheet
+=======
+First things first, we are obviously using nodemon, 
+being able to see changes as they go live is too useful -
+using this in line with browser-sync to reload when source files change.
+who needs react when we got express with browser sync
+
+SERVERSIDE RENDERING YAY!!!! SSR GANG rise up
+
+mmm touch cli, touch my index.js ;)
+
+Express is king
+path module is  obvious, needed to access stylesheets and whatnot
+
+const app = express(); - call the express instance
+port time babey, I always use 8080 after having issues with 8000 in the past
+
+Pug install time, i shouldnt have to say why pug is so much better than html
+Template inheritance go brrrr
+
+STUPID MISTAKE: didnt ignore node_modules, so browser sync ran slow as hell
+
+DRY Dev by using var() in stylesheet
+>>>>>>> 136c6a885787a7f4810685ebdbe3453ec7a77b9a
