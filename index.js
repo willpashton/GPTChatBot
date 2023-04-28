@@ -18,6 +18,7 @@ const port = process.env.PORT || "8080";
  *  App Configuration
  */
 
+
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "pug");
@@ -26,9 +27,6 @@ app.set("view engine", "pug");
  * Routes Definitions
  */
 
-app.get("/", (req, res) => {
-    res.status(200).send("WMM");
-  });
 
 app.get("/", (req, res) => {
     res.render("index", { title: "Home" });
