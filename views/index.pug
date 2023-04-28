@@ -1,14 +1,17 @@
 extends layout
 
 block layout-content
-  div.View
-    h1.Banner WMM 
-    div.Message
-      div.Title
-        h3 Better Call Will!
-        h1 Justice for you
-        h1 wawa
-      span.Details WMM Access
-    div.NavButtons
-      a(href="/user")
-          div.NavButton Book Now
+  header
+    .banner
+      img(src='img/LOGO.png', alt='Logo')
+    .quicknav
+      ul
+        li
+          a(href='#') Home
+        li
+          a(href='#') About
+        li
+          a(href='#') Services
+        li
+          a(href='#') Contact
+    .bannerimage
