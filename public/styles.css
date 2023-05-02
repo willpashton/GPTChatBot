@@ -1,65 +1,128 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #2a2a53;
-    height: 130px;
-    margin: 0;
-    padding: 0;
-    position: relative; 
-  }
-  
-  .banner {
-    height: 100px;
-  }
-  
-  .banner img {
-    width: auto;
-    height: 100px;
-    padding: 15px;
-  }
-  
-  .quicknav {
-    position: absolute; 
-    bottom: -30px; 
-    left: 0; 
-    right: 0; 
-    background-color: rgba(128, 128, 128, 0.5); 
-    height: 30px; 
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  .banner-image {
-    position: absolute;
-    top: 400px; 
-    left: 0;
-    width: 100%;
-    height: 100px; 
-    background-image: url('img/gavelimg.png');
-    background-size: contain;
-  }
-  
-  ul {
-    display: flex;
-    flex-wrap: wrap; 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  li {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-    font-family: "Manrope";
-    font-size: 20px;
-  }
-  
+header {
+  background-color: #2a2a53;
+  height: 15vh;
+  position: relative;
+}
+
+.banner {
+  height: 10vh;
+}
+
+.banner img {
+  height: 130%;
+  padding: 1vh;
+}
+
+.quicknav {
+  position: absolute;
+  top: 99%;
+  left: 0;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.5);
+  height: 5vh;
+}
+
+.bannerimage {
+  position: relative;
+  top: 32%;
+  width: 100%;
+  height: 40vh;
+  background-image: url('img/gavelimg.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.bannertext {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 40%;
+  height: auto;
+  background-color: rgba(128, 128, 128, 0.3);
+  padding: 2%;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+li {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Manrope";
+  font-size: 2vh;
+}
+
+h1 {
+  color: white;
+  text-decoration: none;
+  font-family: "Manrope";
+  font-size: 4vh;
+}
+
+.textcontent {
+  position: relative;
+  margin-top: 45vh;
+  margin-left: 5%;
+  width: 50%;
+}
+
+.textcontent h2 {
+  color: #2a2a53;
+  text-decoration: none;
+  font-family: "Manrope";
+  font-size: 4vh;
+}
+
+.textcontent p {
+  display: flex;
+  color: rgb(22, 22, 22);
+  text-decoration: none;
+  font-family: "Manrope";
+  font-size: 2.5vh;
+  margin-top: 2vh;
+}
+
+.contentimg {
+  position: absolute;
+  top: 60vh;
+  right: 3%;
+  width: 40%;
+  height: 50vh;
+  background-image: url('img/businesswoman.jpg');
+  background-position: 50%;
+  background-size: cover;
+}
+
+#chaticon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 0px;
+  background-image: url('img/chaticon.png');
+  background-size: contain;
+  cursor: pointer;
+}
+
+

@@ -32,6 +32,11 @@ app.get("/", (req, res) => {
     res.render("index", { title: "Home" });
   });
 
+app.get('/chat', (req, res) => {
+    res.render('chat.pug');
+  });
+
+  
 /**
  * Server Activation
  */

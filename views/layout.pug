@@ -11,4 +11,39 @@ html
     link(rel="stylesheet" href="/styles.css")
   body
     div#root
+      header
+        .banner
+          img(src='img/LOGO.png', alt='Logo')
+        .bannerimage
+          .bannertext
+            h1 "A Laywer You Can Trust"
+        .quicknav
+          ul
+            li
+              a(href='#') Home
+            li
+              a(href='#') About
+            li
+              a(href='#') Services
+            li
+              a(href='#') Contact
       block layout-content
+      footer 
+        button(
+          id = "chaticon"
+          class = "chatbtn"
+        )
+        div(class = "chatwindow")
+          div(class = "unread")
+            1
+          div(class = "chatarea")
+          div(class = "message")
+            span(class = "msg") test
+
+          div(class="input")
+            input(type="text")
+            button(id = "submitbtn" class = "send")
+
+
+
+              
