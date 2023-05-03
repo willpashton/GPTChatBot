@@ -9,6 +9,8 @@ html
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="/styles.css")
+    script(type='text/javascript', src='scripts/main.js')
+
   body
     div#root
       header
@@ -34,14 +36,16 @@ html
           class = "chatbtn"
         )
         div(class = "chatwindow")
+          div(class = "chatwindowheader")
+            span(class = "chatheadertext") Can we help?
           div(class = "unread")
-            1
+            span(class="unreadnum") 1
           div(class = "chatarea")
-          div(class = "message")
-            span(class = "msg") test
+            div(class = "message")
+              span(class = "botmsg") test
 
           div(class="input")
-            input(type="text")
+            input(class="entrybox" type="text")
             button(id = "submitbtn" class = "send")
 
 

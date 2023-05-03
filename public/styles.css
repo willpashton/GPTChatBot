@@ -123,6 +123,134 @@ h1 {
   background-image: url('img/chaticon.png');
   background-size: contain;
   cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 
+#chaticon:hover{
+  opacity: 1;
+}
 
+.chatwindow{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 130px;
+  height: 400px;
+  width: 300px;
+  border: #2a2a53;
+  border-width: 2px;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vh;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 6px;
+}
+
+.showchat{
+  display: flex;
+}
+
+.chatarea{
+  position: absolute;
+  top:15%;
+  height:80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message{
+  display: flex;
+  align-items: center;
+}
+
+.message .botmsg{
+  font-size: 15px;
+  font-family: "Manrope";
+  background-color: #2a2a53;
+  opacity: 0.9;
+  color: white;
+  padding: 0.5rem ;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.chatwindowheader{
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #2a2a53;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chatwindowheader .chatheadertext{
+  position: absolute;
+  color: white;
+  font-family: "Manrope";
+  font-size: 20px;
+  padding-left: 5%;
+  top:15%;
+}
+
+.unread{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #5f5f5f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  right: -10px;
+}
+
+.unread .unreadnum{
+  color: white;
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: auto;
+}
+
+.input {
+  background: #2a2a53;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.entrybox {
+  font-family: "Manrope";
+  font-size: 15px;
+  border: 2px solid #2a2a53;
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  padding-top: 3px;
+}
+
+.send{
+  position: absolute;
+  background-color: transparent;
+  background-image: url('img/sendicon.png');
+  background-size: contain;
+  width: 13%;
+  right: 2%;
+  height: 100%;
+  border: 0px;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.send:hover{
+  opacity: 1;
+}
