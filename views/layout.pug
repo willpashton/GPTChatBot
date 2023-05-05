@@ -9,9 +9,9 @@ html
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="/styles.css")
-    script(type='text/javascript', src='scripts/main.js')
 
   body
+    
     div#root
       header
         .banner
@@ -31,6 +31,7 @@ html
               a(href='#') Contact
       block layout-content
       footer 
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type="text/javascript")
         button(
           id = "chaticon"
           class = "chatbtn"
@@ -38,15 +39,27 @@ html
         div(class = "chatwindow")
           div(class = "chatwindowheader")
             span(class = "chatheadertext") Can we help?
-          div(class = "unread")
-            span(class="unreadnum") 1
+            div(class = "dropdown")
+              select(class = "choicedropdown" id = "choicedropdown")
+                option(value='basic') Basic Hard-Coded
+                option(value='openai') OpenAI API
           div(class = "chatarea")
             div(class = "message")
-              span(class = "botmsg") test
+              p(id="firstbotmessage")
+                span(class = "botmsg") Loading...
 
           div(class="input")
             input(class="entrybox" type="text")
             button(id = "submitbtn" class = "send")
+
+          div(id="chatbottom")
+            p
+              span(class = "botmsg")
+          
+
+      script(type='text/javascript', src='scripts/main.js')
+      script(type='text/javascript', src='scripts/response.js')
+      script(type='text/javascript', src='scripts/openai.js')
 
 
 
