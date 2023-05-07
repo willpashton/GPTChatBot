@@ -1,12 +1,15 @@
-function getBotResponse(input) {
+async function getBotResponse(input) {
     let option = $("#choicedropdown option:selected").text()
     if (option == "Basic Hard-Coded"){
         return hardCodedResponse(input)
     }
     else if (option == "OpenAI API"){
-        return runCompletion(input);
+        let result = await openaiResponse(input)
+        return result;
     }
 }
+
+
 
 function hardCodedResponse(input){
     if(input == "BLANK"){

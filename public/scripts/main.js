@@ -33,8 +33,8 @@ function sendUserMessage(){
     }
 };
 
-function getHardResponse(usermsg){
-    let botResponse = getBotResponse(usermsg);
+async function getHardResponse(usermsg){
+    let botResponse = await getBotResponse(usermsg);
     let botHTML = '<div class="message"><span class="botmsg">' + botResponse + '</span></p>'
     chatarea.insertAdjacentHTML("beforeend",botHTML);
 
@@ -50,19 +50,15 @@ btn.addEventListener('click', ()=>{
 
 // Send message
 
-sendbtn.addEventListener('click',()=>{
+sendbtn.addEventListener('click',async ()=>{
     sendUserMessage();
-    setTimeout(()=>{
-        getHardResponse(usermsg);
-    },1000);
+    await getHardResponse(usermsg);
 })
 
-inputarea.addEventListener('keypress',function(e) {
+inputarea.addEventListener('keypress',async function(e) {
     if (e.key === "Enter"){
         sendUserMessage();
-        setTimeout(()=>{
-            getHardResponse(usermsg);
-        },1000);
+        await getHardResponse(usermsg);
     }
 })
 

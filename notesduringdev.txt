@@ -19,3 +19,5 @@ Template inheritance go brrrr
 STUPID MISTAKE: didnt ignore node_modules, so browser sync ran slow as hell
 
 DRY Dev by using var() in stylesheet
+
+ASYNC time while integrating openai api
