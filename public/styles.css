@@ -116,26 +116,26 @@ h1 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   background-color: transparent;
   border: 0px;
   background-image: url('img/chaticon.png');
   background-size: contain;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 
 #chaticon:hover{
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .chatwindow{
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 130px;
+  bottom: 60px;
+  right: 180px;
   height: 400px;
   width: 300px;
   border: #2a2a53;
