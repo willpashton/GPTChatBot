@@ -11,8 +11,10 @@ require('dotenv').config();
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
 const openai = new OpenAIApi(configuration);
+var natural = require('natural');
+var fs = require('fs');
+
 
 
 
@@ -64,6 +66,16 @@ app.get('/api/run-completion/:input', async (req, res) => {
     }
 });
 
+app.get('/api/run-natural/:input',async (req, res) => {
+  try {
+    const result = await runNatural(req.params.input);
+    res.send(result);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error');
+  }
+});
+
 
 async function runCompletion(input){
     try{
@@ -83,4 +95,26 @@ async function runCompletion(input){
     }catch (e){
       console.log(e);
     }
+}
+
+function runNatural(input) {
+  return new Promise((resolve, reject) => {
+    const exists = fs.existsSync('classifier.json');
+    if (exists) {
+      natural.BayesClassifier.load('classifier.json', null, (err, classifier) => {
+        if (err) {
+          console.log(err);
+          reject(err);
+        } else {
+          const classification = classifier.classify(input);
+          console.log(input);
+          console.log(classification.toString())
+          resolve(classification.toString());
+        }
+      });
+    } else {
+      console.log("Classifier not found");
+      reject(new Error("Classifier not found"));
+    }
+  });
 }

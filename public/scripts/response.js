@@ -1,10 +1,14 @@
 async function getBotResponse(input) {
-    let option = $("#choicedropdown option:selected").text()
+    let option = $("#choicedropdown option:selected").text();
     if (option == "Basic Hard-Coded"){
-        return hardCodedResponse(input)
+        return hardCodedResponse(input);
     }
     else if (option == "OpenAI API"){
-        let result = await openaiResponse(input)
+        let result = await openaiResponse(input);
+        return result;
+    }
+    else if (option == "Natural NLP Engine"){
+        let result = await naturalResponse(input);
         return result;
     }
 }
