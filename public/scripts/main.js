@@ -10,7 +10,7 @@ var usermsg = "";
 // Functions
 
 function firstBotMessage(){
-    let firstMessage = "Hello! How can we help?";
+    let firstMessage = "Hello! I'm Annie, How can we help?";
     document.getElementById("firstbotmessage").innerHTML = '<p class="bottext"><span class="botmsg">' + firstMessage + '</span></p>';
 };
 

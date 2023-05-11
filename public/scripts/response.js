@@ -22,7 +22,7 @@ function hardCodedResponse(input){
     processInput = input.toLowerCase();
     //hard coded responses
     var responseDict = {
-        "hello" : "Hello! What can I help you with today?",
+        "hello" : "Hello! My name is Annie, the WMM Chatbot, What can I help you with today?",
         "goodbye" : "Goodbye! I hope I have been helpful!",
         "will" : "We are able to write last wills and testaments. It's very important to write these documents so then your family is able to carry out your wishes. If you call us on (0800123123) then we can guide you through the process.",
         "neglect" : "We are sorry to hear that you have to enquire about this. We are specialists in representing elder abuse, neglect and fraud cases - and have a high success rate as prosecutors in this area. To begin opening a case with us, call us on (0800123123)",
