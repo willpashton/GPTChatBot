@@ -107,13 +107,10 @@ function runNatural(input) {
           reject(err);
         } else {
           const classification = classifier.classify(input);
-          console.log(input);
-          console.log(classification.toString())
           resolve(classification.toString());
         }
       });
     } else {
-      console.log("Classifier not found");
       reject(new Error("Classifier not found"));
     }
   });
